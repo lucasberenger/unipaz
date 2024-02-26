@@ -27,6 +27,7 @@ header {
     display: flex;
     align-items: center;
     padding: 1rem;
+    justify-content: space-evenly;
 }
 
 .logo h1{
@@ -92,6 +93,80 @@ header {
     color: var(--yellow);
     border-bottom: 1px solid var(--yellow);
 }
+
+/* main */
+
+/* services box */
+
+.services-box {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background-color: var(--white);
+}
+
+.arrow-box {
+    margin-top: 6rem;
+    color: var(--dark-blue);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.arrow-button {
+    display: flex;
+    background-color: var(--dark-blue);
+    width: 100%;
+    height: 12rem;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.arrow-button i {
+    cursor: pointer;
+    font-size: 62px;
+    transition: .1s ease;
+    color: var(--white);
+}
+
+.arrow-button i:hover {
+    color: var(--yellow);
+}
+
+.arrow-box h3 {
+    font-size: 82px;
+    width: 60%;
+    line-height: 5rem;
+}
+
+.services {
+    width: 90%;
+    height: 70vh;
+    position: relative;
+}
+
+.services img {
+    position: absolute;
+}
+
+.services-box img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.current-service {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    font-style: italic;
+    letter-spacing: 1px;
+    color: var(--white);
+}
+
+
 
 /* responsive header */
 
