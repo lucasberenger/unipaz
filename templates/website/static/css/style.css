@@ -103,7 +103,6 @@ header {
 
 .container {
     display: flex;
-    justify-content: flex-start;
     width: 100%;
     height: 90vh;
     background-image: url('../images/Monitoring.jpg');
@@ -125,10 +124,6 @@ header {
     padding-top: 2rem;
     padding-left: 20rem;
     z-index: 1;
-}
-
-.container-logo img {
-    width: 140px;
 }
 
 .text-container h3 {
@@ -195,11 +190,6 @@ header {
 .service i {
     padding: 1rem;
     font-size: 52px;
-}
-
-.logo img{
-    width: 200px;
-    padding: 1rem;
 }
 
 /* CLIENTES */
@@ -331,7 +321,12 @@ footer {
 
 @media (max-width: 952px) {
     .nav-bar {
-        justify-content: center;
+        justify-content: space-evenly;
+    }
+
+    .nav-bar h1 {
+        font-size: 32px;
+        margin: 0;
     }
 
     .nav-bar i {
@@ -344,6 +339,159 @@ footer {
     .nav-list {
         display: none;
     }
+
+    /* container */
+
+    .container {
+        display: flex;
+        flex-direction: row;
+        height: 60vh;
+        background-image: url('../images/seguranca_pessoal.jpg');
+        background-position: 50% 10%;
+    }
+    
+    .background-filter {
+        position: absolute;
+        height: 60vh;
+        background-image: linear-gradient(to left, var(--blue) 10%, var(--dark-blue) 70%);
+        opacity: .8;
+    }
+    
+    .text-container {
+        padding: 1.4rem;
+    }
+    
+    .text-container h3 {        
+        font-size: 28px;
+        line-height: 2rem;
+    }
+    
+    .text-container p {
+        font-size: 14px;
+    }
+
+    /* servicos */
+
+    .service-box {
+        padding: 2rem;
+    }
+    
+    .service-box h1 {
+        font-size: 22px;
+    }
+    
+    .services-container {
+        margin: 1rem 0;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .service {
+        width: 12rem;
+        height: 12rem;
+    }
+    
+    .service h2 {
+        font-size: 14px;
+        text-align: center;
+    }
+    
+    .service i {
+        padding: 1rem;
+        font-size: 26px;
+    }
+
+    /* clients */
+    
+    .clients-title h1{
+        font-size: 22px;
+        text-align: center;
+    }
+    
+    .clients-logo {
+        padding-top: 1rem;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .clients-logo img {
+        height: 60px;
+    }
+    
+    .clients-btn:hover {
+        color: var(--yellow);
+        border: 1px solid var(--yellow);
+    }
+
+    /* sobre */
+
+    .about-box {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding: 2rem 1rem;
+        align-items: center;
+    }
+    
+    .about-title h1 {
+        font-size: 22px;
+        text-align: center;
+    }
+    
+    .about-text {
+        font-size: 14px;
+        padding: 1rem;
+        width: auto;
+    }
+    
+    .about-image img{
+        width: 100px;
+    }
+
+    /* footer */
+
+    footer {
+        padding: 1rem;
+        background-color: var(--dark-blue);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .footer-itens {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        border: none;
+        padding-bottom: 1rem;
+    }
+    
+    .footer-itens li{
+        list-style-type: none;
+        padding: .2rem;
+    }
+    
+    .footer-itens a {
+        font-size: 12px;
+        text-decoration: none;
+        color: var(--white);
+    }
+    
+    .footer-itens a:hover {
+        color: #cfcfcf;
+    }
+    
+    .footer-rights {
+        text-align: center;
+        border-top: 1px solid var(--blue);
+        padding-top: 1rem;
+        font-size: 12px;
+        color: var(--blue);
+    }
+
+
 }
 
 
