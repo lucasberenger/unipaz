@@ -85,6 +85,38 @@ main {
     transform: scale(1.05,1.05);
 }
 
+/* responsive form */
+
+@media (max-width: 952px) {
+    .contact-box {
+        display: flex;
+        flex-direction: column-reverse;
+        box-shadow: 3px 3px 12px 3px rgba(0, 0, 0, 0.349);
+        border-radius: 1rem;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .contact-box img {
+        display: none;
+    }
+    
+    .contact-container {
+        width: 100%;
+        display: flex;
+    }
+    
+    .contact-container h1 {
+        font-size: 22px;
+        padding-top: 1rem;
+    }
+    
+    .send-button {
+        width: 40%;
+    }
+    
+}
+
 
 
 
