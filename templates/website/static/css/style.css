@@ -227,13 +227,54 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    padding: 2rem;
 }
 
 .clients-title h1{
     text-transform: uppercase;
     font-style: italic;
     color: var(--yellow);
-    padding: 4rem;
+    padding: 1rem;
+}
+
+.clients-logo {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    
+    justify-content: center;
+    align-items: center;
+}
+
+.clients-logo img {
+    object-fit: cover;
+    width: auto;
+    height: 100px;
+}
+
+.clients-btn {
+    padding: 1rem;
+    background: none;
+    font-size: 18px;
+    color: var(--white);
+    border: 1px solid var(--white);
+    cursor: pointer;
+    margin-top: 2rem;
+    transition: .2s ease;
+}
+
+.clients-btn:hover {
+    color: var(--yellow);
+    border: 1px solid var(--yellow);
+}
+
+/* footer */
+
+footer {
+    height: 18rem;
+    border-top: 1px solid var(--white);
+    background-color: var(--dark-blue);
 }
 
 /* responsive header */
