@@ -16,7 +16,6 @@ main {
 
 .contact-box {
     display: flex;
-    flex-direction: row;
     box-shadow: 3px 3px 12px 3px rgba(0, 0, 0, 0.349);
     border-radius: 1rem;
 }
@@ -26,7 +25,7 @@ main {
     width: 40%;
     height: 600px;
     object-position: 90%;
-    filter: grayscale(50%);
+    filter: grayscale(50%) opacity(.7);
     border-radius: 1rem 0rem 0rem 1rem;
 }
 
@@ -65,25 +64,25 @@ main {
     border: none;
     border-radius: 1rem;
     padding: 1rem;
-    box-shadow: 3px 3px 12px 3px rgba(0, 0, 0, 0.349);
+    box-shadow: 3px 3px 12px 3px rgba(0, 0, 0, 0.116);
 }
 
 .send-button {
-    display: flex;
-    justify-content: right;
-    align-items: center;
+    margin: 1rem;
+    width: 20%;
+    text-align: center;
     padding: 1rem;
+    border: none;
     border-radius: 1rem;
     background-color: var(--yellow);
-    box-shadow: 3px 3px 12px 3px rgba(0, 0, 0, 0.349);
+    box-shadow: 3px 3px 12px 3px rgba(0, 0, 0, 0.116);
     cursor: pointer;
+    transition: .2s ease;
+    align-self: center;
 }
 
-.send-button a{
-    text-decoration: none;
-    color: var(--dark-blue);
-    font-weight: 500;
-    text-transform: uppercase;
+.send-button:hover {
+    transform: scale(1.05,1.05);
 }
 
 
