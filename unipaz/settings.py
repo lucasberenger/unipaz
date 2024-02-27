@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'website',
+    'anymail',
 ]
 
 MIDDLEWARE = [
@@ -125,9 +126,10 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 ##Email settings
 
-EMAIL_BACKEND = 'django.core.mail.backend.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'meuemail@gmail.com'
-EMAIL_HOST_PASSWORD = 'senha'
+ANYMAIL = {
+    'MAILGUN_API_KEY': '506741695f5e88b22c4076a062f52c5e-b7b36bc2-8686404e',
+    'MAILGUN_SENDER_DOMAIN': 'postmaster@sandboxa71c1e67b7fb481e8cafdaa4aad7ebf8.mailgun.org',
+    'MAILGUN_API_URL': 'https://api.mailgun.net/v3' 
+}
+
+EMAIL_BACKEND = 'anymail.backends.mailgun.EmailBackend'
