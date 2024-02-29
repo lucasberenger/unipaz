@@ -207,7 +207,7 @@ header {
     text-transform: uppercase;
     font-style: italic;
     color: var(--yellow);
-    padding: 1rem;
+    padding-bottom: 2.4rem;
 }
 
 .clients-logo {
@@ -223,22 +223,6 @@ header {
     object-fit: cover;
     width: auto;
     height: 100px;
-}
-
-.clients-btn {
-    padding: 1rem;
-    background: none;
-    font-size: 18px;
-    color: var(--white);
-    border: 1px solid var(--white);
-    cursor: pointer;
-    margin-top: 2rem;
-    transition: .2s ease;
-}
-
-.clients-btn:hover {
-    color: var(--yellow);
-    border: 1px solid var(--yellow);
 }
 
 /* SOBRE */
