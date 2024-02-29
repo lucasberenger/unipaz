@@ -5,10 +5,6 @@
     --white: #F2F2F2;
 }
 
-main {
-    height: 200vh;
-}
-
 .services-title {
     padding: 14rem 0 8rem 0;
     width: 100%;
@@ -94,6 +90,7 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 4rem 0 6rem 0;
 }
 
 .personal-container h1 {
@@ -108,5 +105,48 @@ main {
     color: var(--dark-blue);
     width: 60%;
 }
+
+/* monitoramento */
+
+.cftv-container {
+    display: flex;
+    background-color: var(--dark-blue);
+    padding-bottom: 8rem;
+}
+
+.cftv-container h1 {
+    padding: 1rem;
+    text-transform: uppercase;
+    font-style: italic;
+    color: var(--yellow);
+}
+
+.cftv-text {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    padding: 4rem 0 0 18rem;
+    z-index: 2;
+}
+
+.cftv-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cftv-image img {
+    width: 200px;
+    height: auto;
+}
+
+.cftv-text p {
+    padding: 1rem;
+    color: var(--white);
+    width: 70%;
+}
+
+
+
 
 
