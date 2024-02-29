@@ -215,15 +215,16 @@
     background-color: var(--blue);
     border: none;
     cursor: pointer;
-    color: var(--white);
     transition: .2s ease;
+    text-decoration: none;
+    color: var(--white);
 }
 
 .contact-redirect-container button:hover {
     transform: scale(1.05, 1.05);
-    color: var(--blue);
     background-color: var(--dark-blue);
 }
+
 
 
 
