@@ -220,7 +220,7 @@ header {
 .clients-logo img {
     object-fit: cover;
     width: auto;
-    height: 100px;
+    max-height: 100px;
 }
 
 .clients-logo h3 {
@@ -241,16 +241,12 @@ header {
 .clients-logo {
     padding-block: 1rem;
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     gap: 4rem;
     animation: scroll 20s linear;
 }
 
-@keyframes scroll {
-    to {
-        transform: translate(calc(-50% - 2rem));
-    }
-}
+
 
 /* ver dps */
 
