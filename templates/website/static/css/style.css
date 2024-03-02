@@ -232,9 +232,7 @@ header {
 /* clients scroller */
 
 .scroller {
-    max-width: 90%;
-    -webkit-mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
-    mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+    max-width: 80%;
 }
 
 
