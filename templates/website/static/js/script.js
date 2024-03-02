@@ -33,8 +33,37 @@ const observer = new IntersectionObserver((entries) => {
 const hiddenElements = document.querySelectorAll('.hidden')
 hiddenElements.forEach((el) => observer.observe(el))
 
+// services redirect
 
-// --------------
+const estateButton = document.querySelector('.estate')
+const cftvButton = document.querySelector('.monitoring')
+const personalButton = document.querySelector('.personal')
+const eventButton = document.querySelector('.event')
+
+function redirectAndScroll(button, targetId) {
+    button.addEventListener('click', (event) => {
+        event.preventDefault(); 
+
+        window.location.href = './servicos.html' + targetId;
+
+        setTimeout(() => {
+            const targetElement = document.querySelector(targetId);
+
+            if (targetElement) {
+                targetElement.scrollIntoView({ behavior: 'smooth' });
+            }
+        }, 500);
+    });
+}
+
+redirectAndScroll(estateButton, '#seguranca-patrimonial');
+redirectAndScroll(cftvButton, '#monitoramento');
+redirectAndScroll(personalButton, '#seguranca-pessoal');
+redirectAndScroll(eventButton, '#eventos');
+
+
+
+// logo animation
 
 $('.clients-logo').slick({
     slidesToShow: 4,
@@ -42,3 +71,5 @@ $('.clients-logo').slick({
     autoplay: true,
     autoplaySpeed: 2000,
   });
+
+//  ----------
