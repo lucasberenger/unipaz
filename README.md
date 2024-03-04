@@ -10,4 +10,4 @@ Site sendo desenvolvido para a empresa UNIPAZ Serviços. O intuito do projeto é
 
 The [MIT License]() (MIT)
 
-Copyright :copyright: Ano - Titulo do Projeto
+Copyright :copyright: 2024 - UNIPAZ
