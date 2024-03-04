@@ -36,7 +36,7 @@ hiddenElements.forEach((el) => observer.observe(el))
 // services redirect
 
 const estateButton = document.querySelector('.estate')
-const cftvButton = document.querySelector('.escort')
+const escortButton = document.querySelector('.escort')
 const personalButton = document.querySelector('.personal')
 const eventButton = document.querySelector('.event')
 
@@ -57,7 +57,7 @@ function redirectAndScroll(button, targetId) {
 }
 
 redirectAndScroll(estateButton, '#seguranca-patrimonial');
-redirectAndScroll(cftvButton, '#escort');
+redirectAndScroll(escortButton, '#escort');
 redirectAndScroll(personalButton, '#seguranca-pessoal');
 redirectAndScroll(eventButton, '#eventos');
 
