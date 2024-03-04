@@ -108,20 +108,20 @@
 
 /* monitoramento */
 
-.cftv-container {
+.escort-container {
     display: flex;
     background-color: var(--dark-blue);
     padding-bottom: 8rem;
 }
 
-.cftv-container h1 {
+.escort-container h1 {
     padding: 1rem;
     text-transform: uppercase;
     font-style: italic;
     color: var(--yellow);
 }
 
-.cftv-text {
+.escort-text {
     width: 60%;
     display: flex;
     flex-direction: column;
@@ -129,19 +129,19 @@
     z-index: 2;
 }
 
-.cftv-image {
+.escort-image {
     padding-top: 4rem;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.cftv-image img {
+.escort-image img {
     width: 200px;
     height: auto;
 }
 
-.cftv-text p {
+.escort-text p {
     padding: 1rem;
     color: var(--white);
     width: 70%;
@@ -303,33 +303,33 @@
 
     /* cftv */
 
-    .cftv-container {
+    .escort-container {
         flex-direction: column;
         padding-bottom: 2rem;
     }
     
-    .cftv-container h1 {
+    .escort-container h1 {
         padding: 1rem;
         font-size: 26px;
     }
     
-    .cftv-text {
+    .escort-text {
         display: flex;
         flex-direction: column;
         padding: 2rem 0;
         width: 100%;
     }
     
-    .cftv-image {
+    .escort-image {
         padding: 0;
     }
     
-    .cftv-image img {
+    .escort-image img {
         width: 100px;
         height: auto;
     }
     
-    .cftv-text p {
+    .escort-text p {
         width: 90%;
     }
 
