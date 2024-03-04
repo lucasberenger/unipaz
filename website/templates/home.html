@@ -1,0 +1,98 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+       <!-- conteudo da pagina -->
+       <main>
+        <div class="container">
+ 
+             <div class="text-container hidden">
+                     <h3>Segurança<br>e Vigilância</h3>
+                     <p>Excelência em prestação de serviços em segurança.</p>
+             </div>
+ 
+             <div class="background-filter"></div>
+             
+        </div>
+ 
+        <!-- serviços -->
+        <div class="service-box">
+ 
+         <div class="service-title">
+             <h1>Nossos Serviços</h1>
+         </div>
+             <div class="services-container hidden">
+                 <div class="estate service">
+                     <i class="fa-solid fa-house"></i>
+                     <h2>Segurança do Patrimônio</h2>
+                 </div>
+                 <div class="monitoring service">
+                     <i class="fa-solid fa-video"></i>
+                     <h2>Monitoramento</h2>
+                 </div>
+                 <div class="personal service">
+                     <i class="fa-solid fa-shield-halved"></i>
+                     <h2>Segurança Pessoal</h2>
+                 </div>
+                 <div class="event service">
+                     <i class="fa-regular fa-calendar"></i>
+                     <h2>Eventos</h2>
+                 </div>
+             </div>
+     </div>
+ 
+      <!-- clientes -->
+ 
+      <div class="clients-box">
+         <div class="clients-title hidden">
+             <h1>Confiam na Unipaz</h1>
+         </div>
+         <div class="scroller">
+             <div class="clients-logo">
+                 <a href="https://souzaaraujo.com.br/" target="_blank"><img src="{% static 'images/souza-araujo.png' %}" alt="souza araujo"></a>
+ 
+                 <a href="https://rodofly.com/" target="_blank"><img src="{% static 'images/rodofly.png' %}" alt="rodofly"></a>
+                 
+                 <a href="https://luft.com.br/" target="_blank"><img src="{% static 'images/luft.png' %}" alt="luft"></a>
+                 
+                 <a href="http://cidadedasartes.rio.rj.gov.br/" target="_blank"><img src="{% static 'images/rio cidade das artes.png' %}"  alt="cidade das artes"></a>
+                 
+                 <a href="https://www.fluminense.com.br/site/" target="_blank"><img src="{% static 'images/fluminense.svg' %}" alt="fluminense"></a>
+ 
+                 <a href="https://www.circovoador.com.br/" target="_blank">
+                     <img src="{% static 'images/circo voador white.png' %}" alt="circo voador">
+                 </a>               
+ 
+                 <a href="https://www.jcb.com.br/" target="_blank"><img src="{% static 'images/jc_white.png' %}" alt="jockey club"></a>
+ 
+                 <a href="https://tranziran.com.br/" target="_blank"><img src="{% static 'images/tranziran.png' %}" alt="tranziran"></a>
+ 
+                 <a href="https://www.bailedafavorita.com.br/" target="_blank"><img src="{% static 'images/baile-da-favorita.png' %}" alt="baile da favorita"></a>
+ 
+                 <a href="https://www.spartacusbrazil.com.br/" target="_blank"><img src="{% static 'images/spartacus-brazil.png' %}" alt="spartacus-brazil"></a>
+ 
+                 <a href="https://prontocargo.com.br/" target="_blank"><img src="{% static 'images/pronto-cargo.png' %}" alt="pronto cargo"></a>
+             </div>
+         </div>
+     </div>
+ 
+     <!-- sobre -->
+ 
+     <div class="about-box">
+         <div>
+             <div class="about-title hidden">
+                 <h1>Sobre nós</h1>
+             </div>
+             <div class="about-text hidden">
+                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci illo, in odit tempora repudiandae voluptatem blanditiis ipsam? Delectus placeat a libero dolorem inventore non voluptatum, deserunt quis nihil, aspernatur exercitationem!</p>
+                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem laborum beatae illo, quos quod repellat mollitia a quo. Deserunt ad illum possimus ratione quibusdam accusantium eos, quasi quidem aliquam saepe.</p>
+                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi, voluptatibus totam quam possimus numquam, dicta iusto nam officiis blanditiis eos, fugiat quidem hic ipsa voluptas consequuntur quibusdam assumenda obcaecati! Commodi.</p>
+             </div>
+         </div>
+         <div class="about-image hidden">
+             <img src="{% static 'images/unipaz_logo' %}.png" alt="logo">
+         </div>
+     </div>
+ 
+     </main>
+{% endblock %}

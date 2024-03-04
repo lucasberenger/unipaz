@@ -1,0 +1,49 @@
+{% extends 'base.html'%}
+{% load static %}
+
+
+{% block style %}
+<link rel="stylesheet" href="{% static '/css/contato.css' %}">
+{% endblock %}
+
+
+   
+
+{% block content %} 
+<main>
+    <div class="contact-box">
+
+        <img src="{% static 'images/Monitoring.jpg' %}" alt="moitoramento">
+        
+        <div class="contact-container">
+
+            <h1>Fale conosco</h1>
+            
+                <div class="input-group">
+                    <div class="input-box">
+                        <label for="Nome">Nome:</label>
+                        <input id="nome" type="text" name="name" placeholder="Digite o seu nome">
+                    </div>
+
+                    <div class="input-box">
+                        <label for="email">E-mail:</label>
+                        <input id="email" type="text" name="email" placeholder="Digite o seu E-mail">
+                    </div>
+
+                    <div class="input-box">
+                        <label for="number">Número:</label>
+                        <input id="number" type="tel" name="number" placeholder="(xx) xxxx-xxxx">
+                    </div>
+
+                    <div class="input-box">
+                        <label for="message">Mensagem:</label>
+                        <input id="message" type="message" name="message" placeholder="Assunto">
+                    </div>
+                </div>
+
+            <button class="send-button">Enviar</button>
+            
+        </div>
+    </div>
+</main>
+{% endblock %}

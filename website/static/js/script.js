@@ -66,10 +66,10 @@ redirectAndScroll(eventButton, '#eventos');
 // logo animation
 
 $('.clients-logo').slick({
-    slidesToShow: 4,
-    slidesToScroll: 1,
+    slidesToShow: 1,
+    slidesToScroll: 3,
     autoplay: true,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 1000,
   });
 
 //  ----------

@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block style %} 
+<link rel="stylesheet" href="{% static 'css/servicos.css' %}">
+{% endblock %}
+
+{% block content %}
+<main>
+
+    <div class="services-title hidden" id="seguranca-patrimonial">
+        <h1>Nossos Serviços</h1>
+        <p>O Grupo Unipaz é voltado ao ramo de segurança e serviços gerais, tendo como o seu principal objetivo organizar, planejar e assessorar toda uma gama de serviços operacionais em gestão empresarial, e seu segmento é basicamente custo e benefício para que não haja desperdício  de mão de obra qualificada e o serviço venha a ter frutos satisfatórios.</p>
+    </div>
+
+    <div class="estate-container">
+        <div class="estate-text hidden">
+            <h1>Segurança Patrimonial</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni nam ipsam eius sunt quo! Cumque laboriosam officia velit, tempora expedita sapiente voluptatibus vitae sint! Dicta quisquam obcaecati dolores adipisci debitis.</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus tempora possimus, pariatur commodi dicta facilis omnis inventore delectus quidem minima necessitatibus earum! Consequuntur, distinctio nostrum ullam nesciunt accusamus porro ad.</p>
+        </div>
+
+        <div class="estate-image hidden">
+            <img src="{% static 'images/estate-background.png' %}" alt="patrimonio">
+        </div>
+    </div>
+
+    <!-- segurança pessoal -->
+
+    <div class="personal-container" id="seguranca-pessoal">
+        <div class="personal-image">
+            <div class="personal-filter"></div>
+            <img src="{% static 'images/seguranca_pessoal.jpg' %}" alt="seugrança pessoal">
+        </div>
+        <div class="personal-text hidden">
+            <h1>Segurança Pessoal</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur, animi cumque odio libero reprehenderit quas voluptate veritatis nulla natus eum voluptatem doloribus praesentium facilis numquam ipsum molestias possimus minima vitae. <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae voluptate, facilis totam laboriosam recusandae accusantium. Vel adipisci expedita deserunt magni, obcaecati laborum necessitatibus iusto libero repellendus ullam distinctio mollitia tempore.
+            </p>
+        </div>
+    </div>
+
+    <!-- cftv -->
+    <div id="monitoramento"></div>
+    <div class="cftv-container">
+        <div class="cftv-text hidden">
+            <h1>Monitoramento</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni nam ipsam eius sunt quo! Cumque laboriosam officia velit, tempora expedita sapiente voluptatibus vitae sint! Dicta quisquam obcaecati dolores adipisci debitis.</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus tempora possimus, pariatur commodi dicta facilis omnis inventore delectus quidem minima necessitatibus earum! Consequuntur, distinctio nostrum ullam nesciunt accusamus porro ad.</p>
+        </div>
+
+        <div class="cftv-image hidden">
+            <img src="{% static 'images/cftv.png' %}" alt="patrimonio">
+        </div>
+    </div>
+
+    <!-- eventos -->
+
+    <div class="event-container" id="eventos">
+        <div class="event-image">
+            <div class="event-filter"></div>
+            <img src="{% static 'images/event.jpg' %}" alt="seugrança de eventos">
+        </div>
+        <div class="event-text hidden">
+            <h1>Segurança de Eventos</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur, animi cumque odio libero reprehenderit quas voluptate veritatis nulla natus eum voluptatem doloribus praesentium facilis numquam ipsum molestias possimus minima vitae. <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae voluptate, facilis totam laboriosam recusandae accusantium. Vel adipisci expedita deserunt magni, obcaecati laborum necessitatibus iusto libero repellendus ullam distinctio mollitia tempore.
+            </p>
+        </div>
+    </div>
+
+    <div class="contact-redirect-container hidden">
+        <h1>Entre em contato!</h1>
+        <button>Contato</button>
+    </div>
+    
+
+    
+</main>
+{% endblock %}

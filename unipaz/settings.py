@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/5.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.0/ref/settings/
 """
-
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -38,7 +38,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'website',
-    'anymail',
 ]
 
 MIDDLEWARE = [
@@ -53,10 +52,12 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'unipaz.urls'
 
+TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [TEMPLATES_DIR],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -117,19 +118,12 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
+os.path.join(BASE_DIR, 'static')
+MEDIA_URL = '/images/'
+os.path.join(BASE_DIR, 'images')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-##Email settings
-
-ANYMAIL = {
-    'MAILGUN_API_KEY': '506741695f5e88b22c4076a062f52c5e-b7b36bc2-8686404e',
-    'MAILGUN_SENDER_DOMAIN': 'postmaster@sandboxa71c1e67b7fb481e8cafdaa4aad7ebf8.mailgun.org',
-    'MAILGUN_API_URL': 'https://api.mailgun.net/v3' 
-}
-
-EMAIL_BACKEND = 'anymail.backends.mailgun.EmailBackend'
