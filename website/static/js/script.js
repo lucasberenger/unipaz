@@ -61,13 +61,11 @@ redirectAndScroll(cftvButton, '#monitoramento');
 redirectAndScroll(personalButton, '#seguranca-pessoal');
 redirectAndScroll(eventButton, '#eventos');
 
-
-
 // logo animation
 
 $('.clients-logo').slick({
-    slidesToShow: 3,
-    slidesToScroll: 1,
+    slidesToShow: 5,
+    slidesToScroll: 4,
     autoplay: true,
     autoplaySpeed: 2000,
   });
