@@ -211,8 +211,9 @@ header {
 }
 
 .clients-logo {
+    overflow: hidden;
     display: flex;
-    flex-direction: row;
+    flex-direction: nowrap;
     justify-content: center;
     align-items: center;
 }
@@ -223,16 +224,10 @@ header {
     height: 100px;
 }
 
-.clients-logo h3 {
-    color: var(--white);
-    font-size: 24px;
-    font-style: italic;
-}
-
 /* clients scroller */
 
 .scroller {
-    max-width: 80%;
+    max-width: 100%;
 }
 
 
