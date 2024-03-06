@@ -33,9 +33,10 @@ main {
 }
 
 .events-box {
-    padding: 4rem 8rem;
+    padding: 4rem;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    width: 70%;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 4rem;
 }
 
