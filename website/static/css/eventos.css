@@ -42,7 +42,7 @@ main {
 .events-container {
     background-color: var(--dark-blue);
     color: var(--white);
-    padding: 3rem;
+    padding: 2rem;
     border-radius: .5rem;
     display: flex;
     flex-direction: column;
@@ -50,11 +50,13 @@ main {
 }
 
 .events-container h3 {
+    font-size: 16px;
     color: var(--yellow);
     padding-bottom: .4rem;
 }
 
 .events-container p {
+    font-size: 12px;
     padding: .2rem;
 }
 
