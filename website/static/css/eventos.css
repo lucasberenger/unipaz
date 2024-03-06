@@ -35,15 +35,32 @@ main {
 .events-box {
     padding: 4rem;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    gap: 2rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.4rem;
+}
+
+.events-text {
+    display: flex;
+    flex-direction: row;
+    padding-top: 4rem;
+}
+
+.events-text h1 {
+    color: var(--dark-blue);
+    text-transform: uppercase;
+    padding: 4rem 0;
+}
+
+.events-text {
+    width: 100%;
+    padding: 4rem;
 }
 
 .events-container {
     background-color: var(--dark-blue);
     color: var(--white);
     width: 18rem;
-    padding: 2rem;
+    padding: 1.4rem;
     border-radius: .5rem;
     display: flex;
     flex-direction: column;
