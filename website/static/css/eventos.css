@@ -35,14 +35,14 @@ main {
 .events-box {
     padding: 4rem;
     display: grid;
-    width: 70%;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 4rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 2rem;
 }
 
 .events-container {
     background-color: var(--dark-blue);
     color: var(--white);
+    width: 18rem;
     padding: 2rem;
     border-radius: .5rem;
     display: flex;
