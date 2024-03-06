@@ -44,10 +44,9 @@ main {
 .events-text {
     display: flex;
     flex-direction: row;
-    padding-top: 4rem;
     color: var(--dark-blue);
     width: 100%;
-    padding: 0 4rem;
+    padding-left: 4rem;
 }
 
 .events-text h1 {
