@@ -49,12 +49,18 @@ main {
     color: var(--dark-blue);
     text-transform: uppercase;
     padding: 4rem 0;
+    font-style: italic;
 }
 
 .events-text {
     width: 100%;
     padding: 4rem;
 }
+
+#chartdiv {
+    width: 100%;
+    height: 500px;
+  }
 
 .events-container {
     background-color: var(--dark-blue);
