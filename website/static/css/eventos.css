@@ -19,6 +19,7 @@ main {
     flex-direction: column;
     align-items: center;
     background-color: var(--dark-blue);
+    border-bottom: 2px solid var(--blue);
     width: 100%;
 }
 
@@ -36,13 +37,17 @@ main {
     padding: 4rem;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 1.4rem;
+    gap: 2rem;
+    background-color: var(--dark-blue);
 }
 
 .events-text {
     display: flex;
     flex-direction: row;
     padding-top: 4rem;
+    color: var(--dark-blue);
+    width: 100%;
+    padding: 0 4rem;
 }
 
 .events-text h1 {
@@ -52,9 +57,8 @@ main {
     font-style: italic;
 }
 
-.events-text {
-    width: 100%;
-    padding: 4rem;
+.events-text p {
+    width: 80%;
 }
 
 #chartdiv {
@@ -63,14 +67,13 @@ main {
   }
 
 .events-container {
-    background-color: var(--dark-blue);
+    border-left: .4rem solid var(--yellow);
     color: var(--white);
     width: 18rem;
     padding: 1.4rem;
-    border-radius: .5rem;
     display: flex;
     flex-direction: column;
-    box-shadow: 3px 3px 12px 3px rgba(0, 0, 0, 0.349);
+    /* box-shadow: 3px 3px 12px 3px rgba(0, 0, 0, 0.349); */
 }
 
 .events-container h3 {
