@@ -369,15 +369,15 @@ footer {
     }
     
     .services-container {
-        margin: 1rem 0;
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin: 2rem 0;
+        gap: 1rem;
     }
     
     .service {
-        width: 12rem;
-        height: 12rem;
+        width: 10rem;
+        height: 10rem;
     }
     
     .service h2 {
@@ -404,7 +404,7 @@ footer {
     }
     
     .clients-logo img {
-        height: 60px;
+        max-height: 100px;
     }
     
     .clients-btn:hover {
