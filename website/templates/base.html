@@ -59,14 +59,20 @@
     {% block footer %} 
         <!-- footer -->
     <footer>
-        <div class="footer-itens">
-                <li><a href="{% url 'website:index'%}">HOME</a></li>
-                <li><a href="{% url 'website:services'%}">SERVIÇOS</a></li>
-                <li><a href="#">EVENTOS</a></li>
-                <li><a href="{% url 'website:contact'%}">CONTATO</a></li>
+        <div>
+            <div class="footer-itens">
+                    <li><a href="{% url 'website:index'%}">HOME</a></li>
+                    <li><a href="{% url 'website:services'%}">SERVIÇOS</a></li>
+                    <li><a href="#">EVENTOS</a></li>
+                    <li><a href="{% url 'website:contact'%}">CONTATO</a></li>
+            </div>
+            <div class="footer-rights">
+                <p>© 2024 Grupo Unipaz. Todos os direitos reservados.</p>
+            </div>
         </div>
-        <div class="footer-rights">
-            <p>© 2024 Grupo Unipaz. Todos os direitos reservados.</p>
+        <div class="police-container">
+            <img src="{% static 'images/policia-federal.png' %}" alt="policia federal">
+            <p>Empresa Autorizada pela Polícia Federal</p>
         </div>
     </footer>
     

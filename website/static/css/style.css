@@ -259,8 +259,9 @@ footer {
     padding: 2rem;
     background-color: var(--dark-blue);
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
+    justify-content: space-evenly;
 }
 
 .footer-itens {
@@ -288,6 +289,22 @@ footer {
 .footer-rights {
     padding-top: 1rem;
     color: var(--blue);
+}
+
+.police-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.police-container p {
+    width: 50%;
+    color: var(--blue);
+    font: 16px;
+}
+
+.police-container img{
+    width: 50px;
 }
 
 /* scroll animation */
