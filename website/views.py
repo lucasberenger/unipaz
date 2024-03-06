@@ -8,3 +8,6 @@ class CompanyServicesView(TemplateView):
 
 class ContactView(TemplateView):
     template_name = "contato.html"
+
+class EventsView(TemplateView):
+    template_name = "eventos.html"  

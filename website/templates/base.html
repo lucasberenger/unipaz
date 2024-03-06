@@ -31,7 +31,7 @@
             <ul class="nav-list">
                 <li><a href="{% url 'website:index' %}" class="active-page">HOME</a></li>
                 <li><a href="{% url 'website:services'%}">SERVIÇOS</a></li>
-                <li><a href="#">EVENTOS</a></li>
+                <li><a href="{% url 'website:events' %}">EVENTOS</a></li>
                 <li><a href="{% url 'website:contact'%}">CONTATO</a></li>
             </ul>
 
@@ -46,7 +46,7 @@
             <ul class="nav-dropdown_list">
                 <li><a href="{% url 'website:index'%}">HOME</a></li>
                 <li><a href="{% url 'website:services'%}">SERVIÇOS</a></li>
-                <li><a href="#">EVENTOS</a></li>
+                <li><a href="{% url 'website:events' %}">EVENTOS</a></li>
                 <li><a href="{% url 'website:contact'%}">CONTATO</a></li>
             </ul>
         </nav>
@@ -63,7 +63,7 @@
             <div class="footer-itens">
                     <li><a href="{% url 'website:index'%}">HOME</a></li>
                     <li><a href="{% url 'website:services'%}">SERVIÇOS</a></li>
-                    <li><a href="#">EVENTOS</a></li>
+                    <li><a href="{% url 'website:events' %}">EVENTOS</a></li>
                     <li><a href="{% url 'website:contact'%}">CONTATO</a></li>
             </div>
             <div class="footer-rights">

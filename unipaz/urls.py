@@ -23,5 +23,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include(website_urls, namespace='website')),
     path('servicos/', include(website_urls, namespace='servicos')),
-    path('contato/', include(website_urls, namespace='contato'))
+    path('contato/', include(website_urls, namespace='contato')),
+    path('eventos/', include(website_urls, namespace='eventos')),
 ]
