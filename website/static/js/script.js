@@ -125,14 +125,21 @@ const counters = document.querySelectorAll('.data-num')
 counters.forEach(counter => {
   
   const finalCount = counter.dataset.count
-  let initialCount = finalCount - 50
+  let initialCount = 0
   
 
-  const counting = setInterval(updateCounting, 60) 
+  const counting = setInterval(updateCounting, 1) 
 
   function updateCounting() {
-    initialCount++
-    counter.innerText = initialCount
+
+    if(initialCount <= 1000) {
+      initialCount+=5
+      counter.innerText = initialCount
+
+    } else if(initialCount >= 1000) {
+      initialCount += 100
+      counter.innerText = (initialCount / 1000).toFixed(1) + 'K+'
+    } 
 
     if(initialCount >= finalCount) {
       clearInterval(counting)
