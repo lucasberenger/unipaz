@@ -17,6 +17,17 @@ barsButton.addEventListener('click', () => {
     }
 })
 
+// active page
+
+const activePage = window.location.pathname
+console.log('Página ativa: ' + activePage)
+
+const navLinks = document.querySelectorAll('nav a').forEach(link => {
+  if(link.href.includes(`${activePage}`)){
+    link.classList.add('active-page')
+  }
+})
+
 // scroll window animation
 
 const observer = new IntersectionObserver((entries) => {
