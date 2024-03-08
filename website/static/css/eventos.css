@@ -19,8 +19,8 @@ main {
     flex-direction: column;
     align-items: center;
     background-color: var(--dark-blue);
-    border-bottom: 2px solid var(--blue);
     width: 100%;
+    border-bottom: 1px solid var(--yellow);
 }
 
 .title h1 {
@@ -39,6 +39,7 @@ main {
     grid-template-columns: 1fr 1fr 1fr;
     gap: 2rem;
     background-color: var(--dark-blue);
+    border-bottom: 1px solid var(--yellow);
 }
 
 .events-data {
@@ -87,7 +88,14 @@ main {
 
 .events-text p {
     width: 80%;
-    margin-bottom: 2rem;
+}
+
+.events-paragraph p {
+    padding-bottom: 2rem;
+}
+
+.events-paragraph h1 {
+    padding-bottom: 1rem;
 }
 
 #chartdiv {
@@ -128,11 +136,21 @@ main {
         display: flex;
         flex-direction: column;
         width: 100%;
+        padding: 0;
+    }
+
+    .events-data, .events-paragraph {
+        padding-left: 4rem;
     }
 
     .events-box {
         display: grid;
         grid-template-columns: 1fr 1fr;
+    }
+
+    .events-box {
+        width: 100%;
+        padding-left: 4rem;
     }
 }
 
