@@ -87,6 +87,7 @@ main {
 
 .events-text p {
     width: 80%;
+    margin-bottom: 2rem;
 }
 
 #chartdiv {
@@ -120,5 +121,19 @@ main {
     color: var(--yellow);
 }
 
+/* responsive */
+
+@media (max-width: 952px) {
+    .events-text {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .events-box {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
 
 
