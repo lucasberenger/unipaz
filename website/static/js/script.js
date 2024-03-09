@@ -144,7 +144,7 @@ counters.forEach(counter => {
   function updateCounting() {
 
     if(initialCount <= 1000) {
-      initialCount+=5
+      initialCount+=2
       counter.innerText = initialCount
 
     } else if(initialCount >= 1000) {
