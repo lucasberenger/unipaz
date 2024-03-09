@@ -29,9 +29,10 @@ def contact(request):
             send_mail(email_title, email_body, email_sender, [email_recipiest],)
 
             return render(request, 'contact_sent.html', {'message_name': message_name})
-        except ValidationError:
-            message_error = 'Todos os campos devem ser preenchidos!'
-            return render(request, 'contact.html', {'message_error': message_error} )
+        except ValidationError as e:
+            message_error = f'Error: {e}'
+            print(message_error)
+            return render(request, 'contact.html')
     else:
         return render(request, 'contact.html')
             
