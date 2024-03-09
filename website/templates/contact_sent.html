@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block style %}
+<link rel="stylesheet" href="{% static '/css/contato.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<main>
+    <div class="contact-box">
+        <div class="contact-container">{{ message_name }}, sua mensagem foi enviada! A UNIPAZ entrará em contato o mais breve possível.</div>
+    </div>
+</main>
+
+{% endblock %}
