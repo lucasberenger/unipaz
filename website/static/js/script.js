@@ -56,7 +56,7 @@ try {
       button.addEventListener('click', (event) => {
           event.preventDefault(); 
   
-          window.location.href = './servicos.html' + targetId;
+          window.location.href = "{% url 'website:services'%}" + targetId;
   
           setTimeout(() => {
               const targetElement = document.querySelector(targetId);
@@ -144,11 +144,11 @@ counters.forEach(counter => {
   function updateCounting() {
 
     if(initialCount <= 1000) {
-      initialCount+=2
+      initialCount+=1
       counter.innerText = initialCount
 
     } else if(initialCount >= 1000) {
-      initialCount += 100
+      initialCount += 2
       counter.innerText = (initialCount / 1000).toFixed(1) + 'K+'
     } 
 
