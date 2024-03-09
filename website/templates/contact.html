@@ -15,35 +15,35 @@
 
         <img src="{% static 'images/Monitoring.svg' %}" alt="moitoramento">
         
-        <div class="contact-container">
-
+        <form id="contact-form" class="contact-container" method="POST" action="">
+            {% csrf_token %}
+            
             <h1>Fale conosco</h1>
             
                 <div class="input-group">
                     <div class="input-box">
-                        <label for="Nome">Nome:</label>
-                        <input id="nome" type="text" name="name" placeholder="Digite o seu nome">
+                        <label for="name">Nome:</label>
+                        <input id="name" type="text" name="name" placeholder="Digite seu nome">
                     </div>
 
                     <div class="input-box">
                         <label for="email">E-mail:</label>
-                        <input id="email" type="text" name="email" placeholder="Digite o seu E-mail">
+                        <input id="email" type="text" name="email" placeholder="Digite seu E-mail">
                     </div>
 
                     <div class="input-box">
-                        <label for="number">Número:</label>
-                        <input id="number" type="tel" name="number" placeholder="(xx) xxxx-xxxx">
+                        <label for="phone">Telefone:</label>
+                        <input id="phone" type="tel" name="phone" placeholder="(xx) xxxx-xxxx">
                     </div>
 
                     <div class="input-box">
                         <label for="message">Mensagem:</label>
-                        <input id="message" type="message" name="message" placeholder="Assunto">
+                        <input id="message" type="message" name="message" placeholder="Mensagem">
                     </div>
                 </div>
 
-            <button class="send-button">Enviar</button>
-            
-        </div>
+            <button type="submit" class="send-button">Enviar</button>            
+        </form>
     </div>
 </main>
 {% endblock %}

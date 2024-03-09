@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block style %}
+<link rel="stylesheet" href="{% static '/css/contato.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<main>
+    <div class="contact-box">
+        <img src="{% static 'images/Monitoring.svg' %}" alt="monitoramento">
+        <div>
+            <h2>{{ message_name }}, sua mensagem foi enviada com sucesso!</h2>
+            <p>A UNIPAZ entrará em contato em breve.</p>
+        </div>
+        <button type="button" class="send-button">Voltar para home</button>
+    </div>
+</main>
+
+{% endblock %}
