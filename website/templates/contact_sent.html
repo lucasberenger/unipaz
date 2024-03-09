@@ -9,7 +9,12 @@
 
 <main>
     <div class="contact-box">
-        <div class="contact-container">{{ message_name }}, sua mensagem foi enviada! A UNIPAZ entrará em contato o mais breve possível.</div>
+        <img src="{% static 'images/Monitoring.svg' %}" alt="monitoramento">
+        <div>
+            <h2>{{ message_name }}, sua mensagem foi enviada com sucesso!</h2>
+            <p>A UNIPAZ entrará em contato em breve.</p>
+        </div>
+        <button type="button" class="send-button">Voltar para home</button>
     </div>
 </main>
 

@@ -85,8 +85,6 @@ main {
     transform: scale(1.05,1.05);
 }
 
-
-
 /* responsive form */
 
 @media (max-width: 952px) {
