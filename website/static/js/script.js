@@ -51,12 +51,14 @@ try {
   const escortButton = document.querySelector('.escort')
   const personalButton = document.querySelector('.personal')
   const eventButton = document.querySelector('.event')
+
+  const servicesLink = 'home/servicos'
   
   function redirectAndScroll(button, targetId) {
       button.addEventListener('click', (event) => {
           event.preventDefault(); 
   
-          window.location.href = "{% url 'website:services'%}" + targetId;
+          window.location.href = `${servicesLink}`;
   
           setTimeout(() => {
               const targetElement = document.querySelector(targetId);
