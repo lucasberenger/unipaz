@@ -44,41 +44,6 @@ const observer = new IntersectionObserver((entries) => {
 const hiddenElements = document.querySelectorAll('.hidden')
 hiddenElements.forEach((el) => observer.observe(el))
 
-// services redirect
-
-try {
-  const estateButton = document.querySelector('.estate')
-  const escortButton = document.querySelector('.escort')
-  const personalButton = document.querySelector('.personal')
-  const eventButton = document.querySelector('.event')
-
-  const servicesLink = 'home/servicos'
-  
-  function redirectAndScroll(button, targetId) {
-      button.addEventListener('click', (event) => {
-          event.preventDefault(); 
-  
-          window.location.href = `${servicesLink}`;
-  
-          setTimeout(() => {
-              const targetElement = document.querySelector(targetId);
-  
-              if (targetElement) {
-                  targetElement.scrollIntoView({ behavior: 'smooth' });
-              }
-          }, 500);
-      });
-  }
-  
-  redirectAndScroll(estateButton, '#seguranca-patrimonial');
-  redirectAndScroll(escortButton, '#escort');
-  redirectAndScroll(personalButton, '#seguranca-pessoal');
-  redirectAndScroll(eventButton, '#eventos');
-} catch (error) {
-    console.log('erro corrigir depois')
-}
-
-
 
 // logo animation
 
