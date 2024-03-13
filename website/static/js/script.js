@@ -144,11 +144,11 @@ counters.forEach(counter => {
   function updateCounting() {
 
     if(initialCount <= 1000) {
-      initialCount+=100
+      initialCount+=5
       counter.innerText = initialCount
 
     } else if(initialCount >= 1000) {
-      initialCount += 1000
+      initialCount += 100
       counter.innerText = (initialCount / 1000).toFixed(1) + 'K+'
     } 
 
