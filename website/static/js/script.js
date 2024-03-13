@@ -56,7 +56,7 @@ try {
       button.addEventListener('click', (event) => {
           event.preventDefault(); 
   
-          window.location.href = "{% url 'website:services'%}" + targetId;
+          window.location.href = "/servicos" + targetId;
   
           setTimeout(() => {
               const targetElement = document.querySelector(targetId);
