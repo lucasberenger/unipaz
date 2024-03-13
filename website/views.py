@@ -12,6 +12,18 @@ def services(request):
 def events(request):
     return render(request, 'events.html')
 
+def segurancaDoPatrimonio(request):
+    return render(request, 'seguranca-do-patrimonio.html') 
+
+def escoltaArmada(request):
+    return render(request, 'escolta-armada.html')
+
+def segurancaPessoal(request):
+    return render(request, 'seguranca-pessoal.html')
+
+def segurancaEventos(request):
+    return render(request, 'seguranca-de-eventos.html') 
+
 def contact(request):
     if request.method=='POST':
         message_name = request.POST['name']
@@ -35,6 +47,8 @@ def contact(request):
             return render(request, 'contact.html')
     else:
         return render(request, 'contact.html')
+
+ 
             
 
     
