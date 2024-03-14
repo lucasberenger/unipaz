@@ -19,12 +19,12 @@ barsButton.addEventListener('click', () => {
 
 // active page
 
-const activePage = window.location.pathname
-console.log('Página ativa: ' + activePage)
+const navLinksEls = document.querySelectorAll('nav a')
+const windowPathname = window.location.pathname
 
-const navLinks = document.querySelectorAll('nav a').forEach(link => {
-  if(link.href.includes(`${activePage}`)){
-    link.classList.add('active-page')
+navLinksEls.forEach(navLinksEl => {
+  if(navLinksEl.href.includes(windowPathname)) {
+    navLinksEl.classList.add('active-page')
   }
 })
 
