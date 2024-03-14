@@ -61,11 +61,6 @@ header {
     border-bottom: 1px solid var(--yellow);
 }
 
-#start-home {
-    background-color: var(--yellow);
-    padding: 4rem;
-}
-
 .nav-list a:hover{
     /* border-bottom: 1px solid var(--yellow); */
     color: var(--yellow);
