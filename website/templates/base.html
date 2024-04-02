@@ -1,4 +1,5 @@
 {% load static %}
+{% load cache %}
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -26,35 +27,37 @@
 <body>
 
     {% block header %}
-    <header>
-        <nav class="nav-bar">
-            <div class="logo">
-                <h1>UNIPAZ</h1>
-            </div>
+        {% cache 15 header %}
+            <header>
+                <nav class="nav-bar">
+                    <div class="logo">
+                        <h1>UNIPAZ</h1>
+                    </div>
 
-            <ul class="nav-list">
-                <li><a href="{% url 'website:home' %}">HOME</a></li>
-                <li><a href="{% url 'website:services'%}">SERVIÇOS</a></li>
-                <li><a href="{% url 'website:events' %}">EVENTOS</a></li>
-                <li><a href="{% url 'website:contact'%}">CONTATO</a></li>
-            </ul>
+                    <ul class="nav-list">
+                        <li><a href="{% url 'website:home' %}">HOME</a></li>
+                        <li><a href="{% url 'website:services'%}">SERVIÇOS</a></li>
+                        <li><a href="{% url 'website:events' %}">EVENTOS</a></li>
+                        <li><a href="{% url 'website:contact'%}">CONTATO</a></li>
+                    </ul>
 
-            <div class="menu-icons">
-                <i class="fa-solid fa-bars"></i>
-                <!-- fa-x -->
-            </div>
+                    <div class="menu-icons">
+                        <i class="fa-solid fa-bars"></i>
+                        <!-- fa-x -->
+                    </div>
 
-        </nav>
+                </nav>
 
-        <nav class="nav-dropdown">
-            <ul class="nav-dropdown_list">
-                <li><a href="{% url 'website:home'%}">HOME</a></li>
-                <li><a href="{% url 'website:services'%}">SERVIÇOS</a></li>
-                <li><a href="{% url 'website:events' %}">EVENTOS</a></li>
-                <li><a href="{% url 'website:contact'%}">CONTATO</a></li>
-            </ul>
-        </nav>
-    </header>
+                <nav class="nav-dropdown">
+                    <ul class="nav-dropdown_list">
+                        <li><a href="{% url 'website:home'%}">HOME</a></li>
+                        <li><a href="{% url 'website:services'%}">SERVIÇOS</a></li>
+                        <li><a href="{% url 'website:events' %}">EVENTOS</a></li>
+                        <li><a href="{% url 'website:contact'%}">CONTATO</a></li>
+                    </ul>
+                </nav>
+            </header>
+        {% endcache %}
     {% endblock %}
     
     
@@ -62,24 +65,25 @@
 
     {% block footer %} 
         <!-- footer -->
-    <footer>
-        <div>
-            <div class="footer-itens">
-                    <li><a href="{% url 'website:home'%}">HOME</a></li>
-                    <li><a href="{% url 'website:services'%}">SERVIÇOS</a></li>
-                    <li><a href="{% url 'website:events' %}">EVENTOS</a></li>
-                    <li><a href="{% url 'website:contact'%}">CONTATO</a></li>
-            </div>
-            <div class="footer-rights">
-                <p>© 2024 Grupo Unipaz. Todos os direitos reservados.</p>
-            </div>
-        </div>
-        <div class="police-container">
-            <img src="{% static 'images/policia-federal.png' %}" alt="policia federal">
-            <p>Empresa Autorizada pela Polícia Federal</p>
-        </div>
-    </footer>
-    
+        {% cache 500 footer %}
+            <footer>
+                <div>
+                    <div class="footer-itens">
+                            <li><a href="{% url 'website:home'%}">HOME</a></li>
+                            <li><a href="{% url 'website:services'%}">SERVIÇOS</a></li>
+                            <li><a href="{% url 'website:events' %}">EVENTOS</a></li>
+                            <li><a href="{% url 'website:contact'%}">CONTATO</a></li>
+                    </div>
+                    <div class="footer-rights">
+                        <p>© 2024 Grupo Unipaz. Todos os direitos reservados.</p>
+                    </div>
+                </div>
+                <div class="police-container">
+                    <img src="{% static 'images/policia-federal.png' %}" alt="policia federal">
+                    <p>Empresa Autorizada pela Polícia Federal</p>
+                </div>
+            </footer>
+        {% endcache %}
     {% endblock %}
 
 </body>

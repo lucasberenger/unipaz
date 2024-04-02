@@ -1,28 +1,39 @@
+import os
 from django.shortcuts import render
 from django.core.mail import send_mail
 from django.core.exceptions import ValidationError
-from decouple import config
+from django.views.decorators.cache import cache_page
 
+DAYTIME_CACHE = 24 * 60 * 60
+
+@cache_page(15)
 def home(request):
     return render(request, 'home.html')
 
+@cache_page(DAYTIME_CACHE)
 def services(request):
     return render(request, 'services.html')
 
+@cache_page(DAYTIME_CACHE)
 def events(request):
     return render(request, 'events.html')
 
+@cache_page(DAYTIME_CACHE)
 def segurancaDoPatrimonio(request):
     return render(request, 'seguranca-do-patrimonio.html') 
 
+@cache_page(DAYTIME_CACHE)
 def escoltaArmada(request):
     return render(request, 'escolta-armada.html')
 
+@cache_page(DAYTIME_CACHE)
 def segurancaPessoal(request):
     return render(request, 'seguranca-pessoal.html')
 
+@cache_page(DAYTIME_CACHE)
 def segurancaEventos(request):
     return render(request, 'seguranca-de-eventos.html') 
+
 
 def contact(request):
     if request.method=='POST':
@@ -36,7 +47,7 @@ def contact(request):
             email_title = 'Nova Mensagem para UNIPAZ!'
             email_body = f'Remetente: {message_name}\nEmail: {message_email}\nTelefone: {message_phone}\n\n{message}'
             email_sender = message_email
-            email_recipiest = config('EMAIL_UNIPAZ')
+            email_recipiest = os.environ.get('EMAIL_UNIPAZ')
         
             send_mail(email_title, email_body, email_sender, [email_recipiest],)
 
