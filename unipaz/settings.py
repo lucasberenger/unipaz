@@ -76,7 +76,7 @@ DATABASES = {
 
 # DATABASE_INTERNAL_URL = os.environ.get('DATABASE_URL')
 
-DATABASES["default"] = dj_database_url.config(os.environ.get('DATABASE_URL'))
+DATABASES["default"] = dj_database_url.parse("postgres://postgres_unipaz:cmRTP2R6MOxlNtbAhQnwTwtIm4H2QX1B@dpg-co63hq7109ks73dnhakg-a/postgres_unipaz")
 
 # Cache Settings (REDIS)
 CACHES = {
