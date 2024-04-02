@@ -15,4 +15,4 @@ COPY . /app
 
 RUN python manage.py collectstatic --noinput --clear
 
-CMD python manage.py migrate --noinput; guinicorn unipaz.wsgi:application
+CMD python manage.py migrate --noinput; gunicorn unipaz.wsgi:application
