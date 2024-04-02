@@ -15,7 +15,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DEBUG', 'False').lower() == 'true'
 
-ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS').split(' ')
+ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS')
 
 
 # Application definition
@@ -74,9 +74,9 @@ DATABASES = {
     }
 }
 
-DATABASE_URL = os.environ.get('DATABASE_EXTERNAL_URL')
+DATABASE_URL = os.environ.get('DATABASE_INTERNAL_URL')
 
-DATABASES["default"] = dj_database_url.parse("postgres://postgres_unipaz:cmRTP2R6MOxlNtbAhQnwTwtIm4H2QX1B@dpg-co63hq7109ks73dnhakg-a.oregon-postgres.render.com/postgres_unipaz")
+DATABASES["default"] = dj_database_url.parse(DATABASE_URL)
 
 # Cache Settings (REDIS)
 CACHES = {
