@@ -74,9 +74,9 @@ DATABASES = {
     }
 }
 
-DATABASE_INTERNAL_URL = os.environ.get('DATABASE_URL')
+# DATABASE_INTERNAL_URL = os.environ.get('DATABASE_URL')
 
-DATABASES["default"] = dj_database_url.config(DATABASE_INTERNAL_URL)
+DATABASES["default"] = dj_database_url.config(os.environ.get('DATABASE_URL'))
 
 # Cache Settings (REDIS)
 CACHES = {
