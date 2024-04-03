@@ -1,6 +1,7 @@
 import os
 from pathlib import Path
-import dj_database_url
+from dotenv import load_dotenv
+load_dotenv() 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -10,12 +11,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('SECRET_KEY')
+SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DEBUG')
 
-ALLOWED_HOSTS = ["unipaz-servicos.onrender.com", "localhost"]
+ALLOWED_HOSTS = [os.environ.get("ALLOWED_HOSTS"), "localhost"]
 
 
 # Application definition
@@ -69,14 +70,14 @@ WSGI_APPLICATION = 'unipaz.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': os.environ.get("POSTGRES_NAME"),
+        'USER': os.environ.get("POSTGRES_DB"),
+        'PASSWORD': os.environ.get("POSTGRES_PASSWORD"),
+        'HOST': 'db',
+        'PORT': '5432',
     }
 }
-
-# DATABASE_INTERNAL_URL = os.environ.get('DATABASE_URL')
-
-DATABASES["default"] = dj_database_url.parse("postgres://postgres_unipaz:cmRTP2R6MOxlNtbAhQnwTwtIm4H2QX1B@dpg-co63hq7109ks73dnhakg-a/postgres_unipaz")
 
 # Cache Settings (REDIS)
 CACHES = {

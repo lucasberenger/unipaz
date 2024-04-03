@@ -3,3 +3,4 @@ db.sqlite3
 to-do.txt
 Pipfile
 Pipfile.lock
+postgres-data

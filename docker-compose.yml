@@ -9,8 +9,18 @@ services:
     ports:
       - "8000:8000"
     depends_on:
+      - db
       - redis
   
+  db:
+    image: postgres:15
+    volumes:
+      - ./postgres-data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=${POSTGRES_DB}
+      - POSTGRES_NAME=${POSTGRES_NAME}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+      
   redis:
     image: redis:latest
     volumes:
@@ -19,3 +29,5 @@ services:
 
 volumes:
   redis_data:    
+
+
